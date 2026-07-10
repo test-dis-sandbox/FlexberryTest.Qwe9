@@ -1,0 +1,17 @@
+{
+  "ProjectId": "c33aec11-2457-4220-abbf-bf791118fcf6",
+  "CrpLocalPath": null,
+  "JsonMetadataPath": null,
+  "OnlineCrpUrl": "https://localhost:53848",
+  "OneShotToken": null,
+  "GenPath": "src",
+  "BeforeGenScriptPath": null,
+  "AfterGenScriptPath": null,
+  "GenerationItems": {
+    "Validate": false,
+    "UmlCorrector": false,
+    "Metadata": {
+      "Yaml": true
+    }
+  }
+}
