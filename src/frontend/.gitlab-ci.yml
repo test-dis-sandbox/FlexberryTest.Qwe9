@@ -1,0 +1,45 @@
+stages:
+  - build
+
+.frontend:
+  interruptible: true
+
+  variables:
+    PROJECT_DIR: frontend
+
+frontend:build:
+  image: node:24-alpine
+  extends: .frontend
+  stage: build
+
+  script:
+    - cd $PROJECT_DIR
+    - npm install
+    - npm run build
+
+  cache:
+    policy: pull-push
+    key:
+      files:
+        - $PROJECT_DIR/package-lock.json
+    paths:
+      - $PROJECT_DIR/node_modules
+
+  artifacts:
+    paths:
+      - $PROJECT_DIR/public
+      - $PROJECT_DIR/.next
+    expire_in: 1 hrs
+
+  needs: []
+
+  rules:
+    # Запускать, если запрошена с веб-интерфейса с указанием этого проекта
+    - if: $CI_PIPELINE_SOURCE == "web"
+    # Не запускать для ветки если с неё есть мержреквест, т.к. это будет дубль сборки запущенной для мержреквеста
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    # Запускать при коммите в дефолтную ветку и в мержреквесте
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "merge_request_event"
+      changes:
+        - $PROJECT_DIR/**/*

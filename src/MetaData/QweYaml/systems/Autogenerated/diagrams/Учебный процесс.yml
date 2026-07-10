@@ -1,0 +1,50 @@
+diagramType: CAD
+name: Учебный процесс
+primitives:
+  - type: CADClass
+    caseName: tStudentStatus
+    position: 840, 32
+    size: 127, 104
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: tAcademicDegree
+    position: 833, 193
+    size: 178, 91
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: Teacher
+    position: 122, 82
+    size: 246, 104
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: Student
+    position: 104, 287
+    size: 266, 118
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: StudyPlan
+    position: 561, 152
+    size: 254, 104
+    font: DejaVu Sans 9pt
+  - type: Association
+    startPrimitive: StudyPlan
+    endPrimitive: Student
+    startRole: +Plan
+    points:
+      - 580, 180
+      - 380, 290
+    font: DejaVu Sans 9pt
+  - type: Association
+    startPrimitive: Teacher
+    endPrimitive: Student
+    points:
+      - 260, 190
+      - 260, 280
+    font: DejaVu Sans 9pt
+  - type: Association
+    startPrimitive: StudyPlan
+    endPrimitive: Teacher
+    points:
+      - 590, 160
+      - 307, 104
+    font: DejaVu Sans 9pt

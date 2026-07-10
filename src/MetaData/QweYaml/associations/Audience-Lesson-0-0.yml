@@ -1,0 +1,5 @@
+startClassName: Audience
+startMultiplicity: 0..1
+endClassName: Lesson
+endMultiplicity: '*'
+storage: Audience

@@ -1,0 +1,36 @@
+name: Group
+description: Group
+caption: Группа
+attributes:
+  - name: Name
+    type: string
+    order: 1
+    isNullable: true
+    caption: Название
+  - name: EnrollmentYear
+    type: DateTime
+    defaultValue: DateTime.Now
+    order: 2
+    caption: Год поступления
+  - name: IsMaster
+    type: bool
+    defaultValue: false
+    order: 3
+    caption: Магистратура
+  - name: Form
+    type: tEducationForm
+    order: 4
+    isNullable: true
+    caption: Форма обучения
+  - name: FullName
+    type: string
+    notStored: true
+    stored: false
+    order: 5
+    isNullable: true
+    caption: Полное название группы
+    dataServiceExpression:
+      - dataServiceName: ICSSoft.STORMNET.Business.PostgresDataService
+        data: CONCAT(@Name@, \' от \', TO_CHAR(@EnrollmentYear@, \'dd.MM.yyyy\'))
+      - dataServiceName: ICSSoft.STORMNET.Business.MSSQLDataService
+        data: CONCAT(@Name@, \' от \', TO_CHAR(@EnrollmentYear@, \'dd.MM.yyyy\'))

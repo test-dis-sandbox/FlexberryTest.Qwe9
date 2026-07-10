@@ -1,0 +1,7 @@
+name: DepartmentE
+stereotype: «editform»
+description: Department E
+caption: Кафедра
+formViews:
+  - viewName: DepartmentE
+    viewClassName: Department

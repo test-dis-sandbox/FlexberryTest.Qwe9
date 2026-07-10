@@ -1,0 +1,23 @@
+name: Teacher
+caption: Преподаватель
+attributes:
+  - name: FullName
+    type: string
+    order: 1
+    isNullable: true
+    caption: ФИО
+  - name: DateOfBirth
+    type: DateTime
+    defaultValue: DateTime.Now
+    order: 2
+    caption: Дата рождения
+  - name: Degree
+    type: tAcademicDegree
+    order: 3
+    isNullable: true
+    caption: Научная степень
+  - name: PartTime
+    type: bool
+    defaultValue: false
+    order: 4
+    caption: Совместитель

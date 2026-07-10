@@ -1,0 +1,8 @@
+name: StudentBrigadesD
+properties:
+  - name: Participants
+    caption: Участники
+  - name: Faculty
+    caption: Факультет
+    visible: false
+    isMaster: true

@@ -1,0 +1,18 @@
+name: TeacherE
+properties:
+  - name: DateOfBirth
+    caption: Дата рождения
+  - name: Degree
+    caption: Научная степень
+  - name: FullName
+    caption: ФИО
+  - name: PartTime
+    caption: Совместитель
+  - name: StudyPlan
+    caption: Учебный план
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: Specialization
+  - name: StudyPlan.Specialization
+    caption: Специализация
+    visible: false

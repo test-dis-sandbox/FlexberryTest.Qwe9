@@ -1,0 +1,6 @@
+name: AuditView
+properties:
+  - name: Name
+  - name: FoundationDate
+  - name: Faculty
+    isMaster: true

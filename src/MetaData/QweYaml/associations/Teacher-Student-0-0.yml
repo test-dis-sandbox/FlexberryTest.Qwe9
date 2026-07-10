@@ -1,0 +1,5 @@
+startClassName: Teacher
+startMultiplicity: 1
+endClassName: Student
+endMultiplicity: '*'
+storage: Teacher

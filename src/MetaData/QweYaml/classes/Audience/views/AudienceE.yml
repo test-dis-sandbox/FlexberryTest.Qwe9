@@ -1,0 +1,4 @@
+name: AudienceE
+properties:
+  - name: Name
+    caption: Наименование

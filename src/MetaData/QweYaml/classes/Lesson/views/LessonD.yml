@@ -1,0 +1,30 @@
+name: LessonD
+properties:
+  - name: Schedule
+    caption: Расписание
+    visible: false
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: DateFrom
+  - name: Subject
+    caption: Предмет
+  - name: StartTime
+    caption: Время начала
+  - name: EndTime
+    caption: Время окончания
+  - name: Comment
+    caption: Комментарий
+  - name: Teacher
+    caption: Преподаватель
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: FullName
+  - name: Teacher.FullName
+    visible: false
+  - name: Audience
+    caption: Аудитория
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: Name
+  - name: Audience.Name
+    visible: false

@@ -1,0 +1,7 @@
+name: FacultyE
+stereotype: «editform»
+description: Faculty E
+caption: Факультет
+formViews:
+  - viewName: FacultyE
+    viewClassName: Faculty

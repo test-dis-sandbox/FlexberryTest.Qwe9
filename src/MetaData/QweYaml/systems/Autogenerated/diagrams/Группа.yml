@@ -1,0 +1,41 @@
+diagramType: CAD
+name: Группа
+primitives:
+  - type: CADClass
+    caseName: Group
+    position: 246, 165
+    size: 264, 118
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: Student
+    position: 244, 355
+    size: 265, 34
+    font: DejaVu Sans 9pt
+  - type: Association
+    startPrimitive: Student
+    endPrimitive: Group
+    startRole: +Leader
+    points:
+      - 350, 370
+      - 350, 280
+    font: DejaVu Sans 9pt
+  - type: Association
+    startPrimitive: Student
+    endPrimitive: Group
+    startRole: +Assistant
+    points:
+      - 440, 380
+      - 440, 280
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: tEducationForm
+    position: 532, 166
+    size: 127, 78
+    font: DejaVu Sans 9pt
+  - type: Association
+    startPrimitive: Group
+    endPrimitive: Student
+    points:
+      - 280, 280
+      - 280, 360
+    font: DejaVu Sans 9pt

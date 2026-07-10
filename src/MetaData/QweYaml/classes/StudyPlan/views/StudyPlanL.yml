@@ -1,0 +1,10 @@
+name: StudyPlanL
+properties:
+  - name: CreationDate
+    caption: Дата создания
+  - name: HasPractice
+    caption: Наличие практики
+  - name: Specialization
+    caption: Специализация
+  - name: TotalHours
+    caption: Количество часов

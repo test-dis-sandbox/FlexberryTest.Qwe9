@@ -1,0 +1,10 @@
+name: TeacherL
+properties:
+  - name: DateOfBirth
+    caption: Дата рождения
+  - name: Degree
+    caption: Научная степень
+  - name: FullName
+    caption: ФИО
+  - name: PartTime
+    caption: Совместитель

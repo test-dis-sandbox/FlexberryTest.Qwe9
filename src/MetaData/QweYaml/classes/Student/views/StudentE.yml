@@ -1,0 +1,35 @@
+name: StudentE
+properties:
+  - name: EnrollmentDate
+    caption: Дата зачисления
+  - name: FullName
+    caption: ФИО
+  - name: IsBudget
+    caption: Бюджетная основа
+  - name: Status
+    caption: Статус
+  - name: StudentId
+    caption: Номер зачётной книжки
+  - name: Teacher
+    caption: Преподаватель
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: FullName
+  - name: Teacher.FullName
+    caption: ФИО преподавателя
+    visible: false
+  - name: Plan
+    caption: Учебный план
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: Specialization
+  - name: Plan.Specialization
+    caption: Специализация
+    visible: false
+  - name: Group
+    caption: Группа
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: Name
+  - name: Group.Name
+    caption: Название группы

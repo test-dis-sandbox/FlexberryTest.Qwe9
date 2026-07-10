@@ -1,0 +1,25 @@
+containers:
+  - className: TeacherL
+    menuPath: Учебный процесс
+    caption: Учителя
+  - className: StudyPlanL
+    menuPath: Учебный процесс
+    caption: Учебные планы
+  - className: StudentL
+    menuPath: Учебный процесс\Группа
+    caption: Студенты
+  - className: GroupL
+    menuPath: Учебный процесс\Группа
+    caption: Группы
+    description: Group L
+  - className: DepartmentL
+    menuPath: Структура университета
+    caption: Кафедры
+    description: Department L
+  - className: FacultyL
+    menuPath: Структура университета
+    caption: Факультеты
+    description: Faculty L
+  - className: ScheduleL
+    menuPath: Расписание
+    caption: Расписания

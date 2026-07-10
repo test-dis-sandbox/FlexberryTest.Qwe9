@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net10.0</TargetFrameworks>
+    <Configurations>Debug;Release</Configurations>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Qwe.Objects</RootNamespace>
+    <AssemblyName>Qwe.Objects</AssemblyName>
+    <XunitStartupFullName>Qwe.Objects.Startup</XunitStartupFullName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json"><CopyToOutputDirectory>Always</CopyToOutputDirectory></None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NewPlatform.Flexberry.StyleCopRuleset" Version="1.0.0"></PackageReference>
+    <PackageReference Include="NewPlatform.Flexberry.ORM" Version="8.0.0-beta07"></PackageReference>
+    <PackageReference Include="NewPlatform.Flexberry.ORM.MSSQLDataService" Version="8.0.0-beta07"></PackageReference>
+    <PackageReference Include="NewPlatform.Flexberry.ORM.PostgresDataService" Version="8.0.0-beta07"></PackageReference>
+  </ItemGroup>
+
+</Project>

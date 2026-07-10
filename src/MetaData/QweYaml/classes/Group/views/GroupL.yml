@@ -1,0 +1,16 @@
+name: GroupL
+properties:
+  - name: Name
+    caption: Название
+  - name: FullName
+    caption: Полное название
+  - name: EnrollmentYear
+    caption: Год поступления
+  - name: Form
+    caption: Форма обучения
+  - name: IsMaster
+    caption: Магистратура
+  - name: Department
+    caption: Department
+    visible: false
+    isMaster: true

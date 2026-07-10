@@ -1,0 +1,70 @@
+diagramType: CAD
+name: Расписание
+primitives:
+  - type: CADClass
+    caseName: Schedule
+    position: 64, 57
+    size: 154, 104
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: Lesson
+    position: 65, 273
+    size: 148, 104
+    font: DejaVu Sans 9pt
+  - type: Composition
+    startPrimitive: Schedule
+    endPrimitive: Lesson
+    endRole: +Lessons
+    points:
+      - 120, 140
+      - 120, 290
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: Teacher
+    position: 349, 275
+    size: 101, 34
+    font: DejaVu Sans 9pt
+  - type: Association
+    startPrimitive: Teacher
+    endPrimitive: Lesson
+    points:
+      - 360, 290
+      - 182, 290
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: Group
+    position: 563, 83
+    size: 97, 34
+    font: DejaVu Sans 9pt
+  - type: Composition
+    startPrimitive: Schedule
+    endPrimitive: ScheduleGroup
+    endRole: +Groups
+    points:
+      - 200, 100
+      - 400, 100
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: ScheduleGroup
+    position: 363, 64
+    size: 129, 66
+    font: DejaVu Sans 9pt
+  - type: Association
+    startPrimitive: Group
+    endPrimitive: ScheduleGroup
+    points:
+      - 560, 100
+      - 480, 100
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: Audience
+    position: 65, 462
+    size: 107, 66
+    font: DejaVu Sans 9pt
+  - type: Association
+    startPrimitive: Audience
+    endPrimitive: Lesson
+    points:
+      - 120, 470
+      - 120, 390
+    font: DejaVu Sans 9pt

@@ -1,0 +1,11 @@
+name: tEducationForm
+stereotype: «enumeration»
+attributes:
+  - name: Correspondence
+    order: 1
+    isNullable: true
+    caption: Заочная
+  - name: FullTime
+    order: 2
+    isNullable: true
+    caption: Очная

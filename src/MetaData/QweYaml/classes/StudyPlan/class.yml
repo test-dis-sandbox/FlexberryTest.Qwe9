@@ -1,0 +1,23 @@
+name: StudyPlan
+caption: Учебный план
+attributes:
+  - name: CreationDate
+    type: DateTime
+    defaultValue: DateTime.Now
+    order: 1
+    caption: Дата создания
+  - name: Specialization
+    type: string
+    order: 2
+    isNullable: true
+    caption: Специализация
+  - name: TotalHours
+    type: int
+    defaultValue: 0
+    order: 3
+    caption: Количество часов
+  - name: HasPractice
+    type: bool
+    defaultValue: false
+    order: 4
+    caption: Наличие практики

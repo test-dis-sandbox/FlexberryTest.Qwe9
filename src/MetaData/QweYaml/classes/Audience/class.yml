@@ -1,0 +1,8 @@
+name: Audience
+caption: Аудитория
+attributes:
+  - name: Name
+    type: string
+    order: 1
+    isNullable: true
+    caption: Наименование

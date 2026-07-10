@@ -1,0 +1,6 @@
+name: ScheduleGroup
+attributes:
+  - name: Summary
+    type: string
+    order: 1
+    isNullable: true

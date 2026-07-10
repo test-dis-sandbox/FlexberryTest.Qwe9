@@ -1,0 +1,25 @@
+name: LessonL
+properties:
+  - name: Schedule
+    visible: false
+    isMaster: true
+  - name: Schedule.Year
+    visible: false
+  - name: Schedule.Week
+    visible: false
+  - name: Schedule.Day
+    visible: false
+  - name: Schedule.DateFrom
+    caption: Дата
+  - name: Subject
+    caption: Предмет
+  - name: StartTime
+    caption: Время начала
+  - name: EndTime
+    caption: Время окончания
+  - name: Teacher.FullName
+    caption: Преподаватель
+  - name: Audience.Name
+    caption: Аудитория
+  - name: Comment
+    caption: Комментарий

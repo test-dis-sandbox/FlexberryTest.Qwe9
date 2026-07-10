@@ -1,0 +1,42 @@
+bool:
+  typeName: BIT
+byte:
+  typeName: TINYINT
+char:
+  typeName: TINYINT
+DateTime:
+  typeName: DATETIME
+decimal:
+  typeName: DECIMAL
+double:
+  typeName: FLOAT
+float:
+  typeName: REAL
+guid:
+  typeName: uniqueidentifier
+int:
+  typeName: INT
+long:
+  typeName: INT
+NullableDateTime:
+  typeName: DATETIME
+NullableDecimal:
+  typeName: DECIMAL
+NullableInt:
+  typeName: INT
+object:
+  typeName: LONGVARBINARY
+sbyte:
+  typeName: TINYINT
+short:
+  typeName: SMALLINT
+string:
+  typeName: VARCHAR(255)
+uint:
+  typeName: INT
+ulong:
+  typeName: INT
+ushort:
+  typeName: SMALLINT
+WebFile:
+  typeName: NVARCHAR(MAX)

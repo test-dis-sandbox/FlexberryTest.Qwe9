@@ -1,0 +1,21 @@
+name: Lesson
+caption: Занятие
+attributes:
+  - name: Subject
+    type: string
+    order: 1
+    isNullable: true
+    caption: Тема занятия
+  - name: StartTime
+    type: DateTime
+    order: 2
+    caption: Время начала
+  - name: EndTime
+    type: DateTime
+    order: 3
+    caption: Время окончания
+  - name: Comment
+    type: string
+    order: 4
+    isNullable: true
+    caption: Комментарий

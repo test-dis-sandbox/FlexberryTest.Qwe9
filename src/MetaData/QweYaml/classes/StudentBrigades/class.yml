@@ -1,0 +1,8 @@
+name: StudentBrigades
+caption: СтудОтряды
+attributes:
+  - name: Participants
+    type: int
+    defaultValue: 0
+    order: 1
+    caption: участники

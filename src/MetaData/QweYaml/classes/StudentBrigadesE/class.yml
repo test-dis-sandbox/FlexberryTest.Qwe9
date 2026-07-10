@@ -1,0 +1,6 @@
+name: StudentBrigadesE
+stereotype: «editform»
+caption: студенческие отряды
+formViews:
+  - viewName: StudentBrigadesD
+    viewClassName: StudentBrigades

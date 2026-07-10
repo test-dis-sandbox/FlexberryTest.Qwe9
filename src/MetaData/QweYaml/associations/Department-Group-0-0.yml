@@ -1,0 +1,6 @@
+type: Aggregation
+startClassName: Department
+startMultiplicity: 1
+endClassName: Group
+endMultiplicity: '*'
+storage: Department

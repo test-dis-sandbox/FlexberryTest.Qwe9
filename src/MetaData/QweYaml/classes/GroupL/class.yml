@@ -1,0 +1,11 @@
+name: GroupL
+stereotype: «listform»
+description: Group L
+caption: Группа
+formViews:
+  - viewName: GroupL
+    viewClassName: Group
+    dataObjectTypes:
+      - className: Group
+        newContainerName: GroupE
+        editContainerName: GroupE

@@ -1,0 +1,5 @@
+FROM postgres:14
+
+ENV POSTGRES_USER flexberryuser
+ENV POSTGRES_PASSWORD jhv
+ENV POSTGRES_DB appdb

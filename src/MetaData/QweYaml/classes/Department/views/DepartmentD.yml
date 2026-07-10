@@ -1,0 +1,16 @@
+name: DepartmentD
+properties:
+  - name: Name
+    caption: Название
+  - name: Specialization
+    caption: Специализация
+  - name: HasAdditionalEducation
+    caption: Наличие дополнительного образования
+  - name: FoundationDate
+    caption: Дата основания
+  - name: Document
+    caption: Устав кафедры
+  - name: Faculty
+    caption: Факультет
+    visible: false
+    isMaster: true

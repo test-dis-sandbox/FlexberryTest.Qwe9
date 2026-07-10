@@ -1,0 +1,6 @@
+name: StudyPlanE
+stereotype: «editform»
+caption: Учебный план
+formViews:
+  - viewName: StudyPlanE
+    viewClassName: StudyPlan

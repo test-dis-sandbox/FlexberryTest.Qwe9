@@ -1,0 +1,6 @@
+name: ScheduleE
+stereotype: «editform»
+caption: Расписание
+formViews:
+  - viewName: ScheduleE
+    viewClassName: Schedule

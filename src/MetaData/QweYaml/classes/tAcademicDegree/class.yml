@@ -1,0 +1,11 @@
+name: tAcademicDegree
+stereotype: «enumeration»
+attributes:
+  - name: CandidateOfSciences
+    order: 1
+    isNullable: true
+    caption: Кандидат наук
+  - name: DoctorOfSciences
+    order: 2
+    isNullable: true
+    caption: Доктор наук

@@ -1,0 +1,6 @@
+startClassName: Student
+startRole: Leader
+startMultiplicity: 1
+endClassName: Group
+endMultiplicity: '*'
+storage: Leader

@@ -1,0 +1,29 @@
+name: ScheduleGroupD
+properties:
+  - name: Schedule
+    caption: Расписание
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: DateFrom
+  - name: Schedule.Year
+    visible: false
+  - name: Schedule.Week
+    visible: false
+  - name: Schedule.Day
+    visible: false
+  - name: Schedule.DateFrom
+    visible: false
+  - name: Group
+    caption: Группа
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: FullName
+  - name: Group.FullName
+    caption: Полное назание группы
+  - name: Group.Name
+    caption: Назание группы
+    visible: false
+  - name: Group.EnrollmentYear
+    visible: false
+  - name: Summary
+    caption: Описание

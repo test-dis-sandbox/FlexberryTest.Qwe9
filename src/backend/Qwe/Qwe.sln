@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qwe.WebAPI", "Qwe.WebAPI\Qwe.WebAPI.csproj", "{C317B2CD-E086-4366-9F9A-E33BFD9BF8C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qwe.ApplicationLayer", "Qwe.ApplicationLayer\Qwe.ApplicationLayer.csproj", "{97953A10-6834-4DCD-B590-6C832A2374CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qwe.Objects", "Qwe.Objects\Qwe.Objects.csproj", "{0C5F1B8F-7D90-43E4-BFA6-18A0A6A10361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qwe.Tests", "Qwe.Tests\Qwe.Tests.csproj", "{F1EDAC22-0B8C-464D-8D0F-135C66E6158B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qwe.BusinessServers", "Qwe.BusinessServers\Qwe.BusinessServers.csproj", "{A4C9AAE7-55A3-4B83-9FFC-4285E299CB73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qwe.IntegrationTests", "Qwe.IntegrationTests\Qwe.IntegrationTests.csproj", "{7202E47C-4AfA-4B2D-872B-86B47f7E935D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C317B2CD-E086-4366-9F9A-E33BFD9BF8C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C317B2CD-E086-4366-9F9A-E33BFD9BF8C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C317B2CD-E086-4366-9F9A-E33BFD9BF8C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C317B2CD-E086-4366-9F9A-E33BFD9BF8C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97953A10-6834-4DCD-B590-6C832A2374CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97953A10-6834-4DCD-B590-6C832A2374CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97953A10-6834-4DCD-B590-6C832A2374CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97953A10-6834-4DCD-B590-6C832A2374CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C5F1B8F-7D90-43E4-BFA6-18A0A6A10361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5F1B8F-7D90-43E4-BFA6-18A0A6A10361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5F1B8F-7D90-43E4-BFA6-18A0A6A10361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5F1B8F-7D90-43E4-BFA6-18A0A6A10361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1EDAC22-0B8C-464D-8D0F-135C66E6158B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EDAC22-0B8C-464D-8D0F-135C66E6158B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EDAC22-0B8C-464D-8D0F-135C66E6158B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EDAC22-0B8C-464D-8D0F-135C66E6158B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C9AAE7-55A3-4B83-9FFC-4285E299CB73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4C9AAE7-55A3-4B83-9FFC-4285E299CB73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4C9AAE7-55A3-4B83-9FFC-4285E299CB73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4C9AAE7-55A3-4B83-9FFC-4285E299CB73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7202E47C-4AfA-4B2D-872B-86B47f7E935D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7202E47C-4AfA-4B2D-872B-86B47f7E935D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7202E47C-4AfA-4B2D-872B-86B47f7E935D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7202E47C-4AfA-4B2D-872B-86B47f7E935D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CB81834-064E-4828-881E-337704DFBE9B}
+	EndGlobalSection
+EndGlobal

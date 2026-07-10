@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "Qwe.WebAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:6500",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BackendRoot": "http://localhost"
+      }
+    }
+  }
+}

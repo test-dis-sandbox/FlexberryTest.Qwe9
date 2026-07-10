@@ -1,0 +1,13 @@
+name: StudentL
+properties:
+  - name: EnrollmentDate
+    caption: Дата зачисления
+  - name: FullName
+    caption: ФИО
+  - name: IsBudget
+    caption: Бюджетная основа
+  - name: Status
+    caption: Статус
+  - name: StudentId
+    caption: 'Номер зачётной книжки '
+  - name: Plan.HasPractice

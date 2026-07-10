@@ -1,0 +1,11 @@
+name: FacultyL
+stereotype: «listform»
+description: Faculty L
+caption: Факультет
+formViews:
+  - viewName: FacultyL
+    viewClassName: Faculty
+    dataObjectTypes:
+      - className: Faculty
+        newContainerName: FacultyE
+        editContainerName: FacultyE

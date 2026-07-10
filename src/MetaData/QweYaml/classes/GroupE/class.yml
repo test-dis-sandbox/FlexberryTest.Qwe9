@@ -1,0 +1,7 @@
+name: GroupE
+stereotype: «editform»
+description: Group E
+caption: Группа
+formViews:
+  - viewName: GroupE
+    viewClassName: Group

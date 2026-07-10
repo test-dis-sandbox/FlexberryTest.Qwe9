@@ -1,0 +1,6 @@
+startClassName: StudyPlan
+startRole: Plan
+startMultiplicity: 1
+endClassName: Student
+endMultiplicity: '*'
+storage: Plan

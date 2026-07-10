@@ -1,0 +1,14 @@
+name: DepartmentL
+properties:
+  - name: Name
+    caption: Название
+  - name: FoundationDate
+    caption: Дата основания
+  - name: HasAdditionalEducation
+    caption: Наличие дополнительного образования
+  - name: Specialization
+    caption: Специализация
+  - name: Faculty
+    caption: Факультет
+    visible: false
+    isMaster: true

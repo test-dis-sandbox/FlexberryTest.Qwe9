@@ -1,0 +1,24 @@
+name: Faculty
+description: Faculty
+caption: Факультет
+businessServerClass: FacultyBS
+attributes:
+  - name: Name
+    type: string
+    order: 1
+    caption: Название
+  - name: FoundationDate
+    type: DateTime
+    defaultValue: DateTime.Now
+    order: 2
+    caption: Дата основания
+  - name: HasMilitaryDepartment
+    type: bool
+    defaultValue: false
+    order: 3
+    caption: Военная кафедра
+  - name: Type
+    type: tFacultyType
+    order: 4
+    isNullable: true
+    caption: Профиль факультета

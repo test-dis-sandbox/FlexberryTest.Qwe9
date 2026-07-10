@@ -1,0 +1,59 @@
+name: Department
+description: Department
+caption: Кафедра
+auditEnabled: true
+addAuditFields: true
+useDefaultView: true
+insertAudit: true
+deleteAudit: true
+updateAudit: true
+attributes:
+  - name: Name
+    type: string
+    order: 1
+    isNullable: true
+    caption: Название
+  - name: FoundationDate
+    type: DateTime
+    defaultValue: DateTime.Now
+    order: 2
+    caption: Дата основания
+  - name: HasAdditionalEducation
+    type: bool
+    defaultValue: false
+    order: 3
+    caption: Дополнительное образование
+  - name: Specialization
+    type: tDirection
+    order: 4
+    isNullable: true
+    caption: Специализация
+  - name: CreateTime
+    type: AuditNullableDateTime
+    description: Время создания объекта
+    order: 5
+    isNullable: true
+    caption: Создание
+  - name: EditTime
+    type: AuditNullableDateTime
+    description: Время последнего редактирования объекта
+    order: 6
+    isNullable: true
+    caption: Редактирование
+  - name: Creator
+    type: string
+    description: Создатель объекта
+    order: 7
+    isNullable: true
+    caption: Создатель
+  - name: Editor
+    type: string
+    description: Последний редактор объекта
+    order: 8
+    isNullable: true
+    caption: Редактор
+  - name: Document
+    type: WebFile
+    order: 9
+    isNullable: true
+    caption: Устав кафедры

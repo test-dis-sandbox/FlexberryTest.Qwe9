@@ -1,0 +1,10 @@
+name: FacultyL
+properties:
+  - name: Name
+    caption: Название
+  - name: FoundationDate
+    caption: Дата основания
+  - name: HasMilitaryDepartment
+    caption: Наличие военной кафедры
+  - name: Type
+    caption: Профиль факультета

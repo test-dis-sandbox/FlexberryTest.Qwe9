@@ -1,0 +1,28 @@
+name: Student
+caption: Студент
+attributes:
+  - name: FullName
+    type: string
+    order: 1
+    isNullable: true
+    caption: ФИО
+  - name: EnrollmentDate
+    type: DateTime
+    defaultValue: DateTime.Now
+    order: 2
+    caption: Дата зачисления
+  - name: IsBudget
+    type: bool
+    defaultValue: false
+    order: 3
+    caption: Бюджетная основа
+  - name: Status
+    type: tStudentStatus
+    order: 4
+    isNullable: true
+    caption: Статус студента
+  - name: StudentId
+    type: string
+    order: 5
+    isNullable: true
+    caption: Номер зачётной книжки

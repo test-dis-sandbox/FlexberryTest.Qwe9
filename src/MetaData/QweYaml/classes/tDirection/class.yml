@@ -1,0 +1,19 @@
+name: tDirection
+stereotype: «enumeration»
+attributes:
+  - name: Engineering
+    order: 1
+    isNullable: true
+    caption: Инженерия
+  - name: Robotics
+    order: 2
+    isNullable: true
+    caption: Робототехника
+  - name: СomputerSecurity
+    order: 3
+    isNullable: true
+    caption: Компьютерная безопасность
+  - name: ComputerScience
+    order: 4
+    isNullable: true
+    caption: Компьютерные науки

@@ -1,0 +1,83 @@
+diagramType: CAD
+name: University
+primitives:
+  - type: CADClass
+    caseName: University
+    position: 300, 40
+    size: 128, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: FacultyE
+    position: 166, 43
+    size: 100, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: FacultyL
+    position: 26, 45
+    size: 100, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: DepartmentL
+    position: 23, 141
+    size: 113, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: DepartmentE
+    position: 169, 139
+    size: 110, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: GroupE
+    position: 167, 242
+    size: 100, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: GroupL
+    position: 28, 241
+    size: 100, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: StudentL
+    position: 29, 334
+    size: 100, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: StudentE
+    position: 167, 336
+    size: 100, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: TeacherL
+    position: 30, 426
+    size: 100, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: TeacherE
+    position: 166, 428
+    size: 100, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: StudyPlanL
+    position: 34, 513
+    size: 101, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: StudyPlanE
+    position: 169, 512
+    size: 102, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: StudentBrigadesE
+    position: 384, 347
+    size: 139, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: ScheduleL
+    position: 454, 41
+    size: 100, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: ScheduleE
+    position: 584, 43
+    size: 100, 34
+    font: DejaVu Sans 9pt

@@ -1,0 +1,15 @@
+name: tFacultyType
+stereotype: «enumeration»
+attributes:
+  - name: Technical
+    order: 1
+    isNullable: true
+    caption: Технический
+  - name: Humanitarian
+    order: 2
+    isNullable: true
+    caption: Гуманитарный
+  - name: chemical
+    order: 3
+    isNullable: true
+    caption: Химический

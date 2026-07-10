@@ -1,0 +1,16 @@
+formatVersion: 1.0
+format: fdy
+name: qwe
+description: undefined
+company: IIS
+product: Qwe
+copyright: (c) 2004-2025. IIS ZAO. All rights reserved.
+version: 1.0.0.1
+sQLPath: SQL
+defaultBaseClass: ICSSoft.STORMNET.DataObject
+defaultDetailArrayClass: ICSSoft.STORMNET.DetailArray
+mssqlConnectionString: SERVER=server;Trusted_connection=yes;DATABASE=database;
+oracleConnectionString: Data Source=orcl;User ID=userid;Password=12345;
+postgreConnectionString: Host=app-postgres-db;Port=5432;Database=appdb;User ID=flexberryuser;Password=jhv;
+auditEnabled: true
+isAuditDatabaseLocal: false

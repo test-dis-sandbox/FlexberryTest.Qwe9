@@ -1,0 +1,93 @@
+stages:
+  - test
+  - build
+
+.backend:
+  interruptible: true
+
+  variables:
+    PROJECT_DIR: backend/Qwe
+    CACHE_PATH: .nugetcache
+
+backend:test:
+  extends: .backend
+  stage: test
+  image: $NEXUS_REGISTRY/gitlab-ci/dotnet:7.0
+
+  variables:
+    BUILD_CONFIG: "Debug"
+    TEST_PATH: Qwe.Tests/Qwe.Tests.csproj
+
+  script:
+    - cd $PROJECT_DIR
+    - dotnet add $TEST_PATH package --no-restore JUnitTestLogger
+    - dotnet restore $TEST_PATH --packages $CACHE_PATH
+    - dotnet build $TEST_PATH --configuration $BUILD_CONFIG --no-restore
+    - dotnet test $TEST_PATH --configuration $BUILD_CONFIG --no-build --verbosity normal --logger "junit;LogFileName=TestResults.xml" --results-directory test
+
+  artifacts:
+    when: always
+    paths:
+      - $PROJECT_DIR/test/TestResults.xml
+    reports:
+      junit: $PROJECT_DIR/test/TestResults.xml
+
+  cache:
+    policy: pull-push
+    key:
+      files:
+        - $PROJECT_DIR/Qwe.WebAPI/Qwe.WebAPI.csproj
+    paths:
+      - $PROJECT_DIR/$CACHE_PATH
+
+  needs: []
+
+  rules:
+    # Запускать, если запрошена с веб-интерфейса с указанием этого проекта
+    - if: $CI_PIPELINE_SOURCE == "web"
+    # Не запускать для ветки если с неё есть мержреквест, т.к. это будет дубль сборки запущенной для мержреквеста
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    # Запускать при коммите в дефолтную ветку и в мержреквесте
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "merge_request_event"
+      changes:
+        - $PROJECT_DIR/**/*
+
+backend:build:
+  image: $NEXUS_REGISTRY/gitlab-ci/dotnet:7.0
+  extends: .backend
+  stage: build
+
+  script:
+    - cd $PROJECT_DIR
+    - dotnet restore --packages $CACHE_PATH Qwe.sln
+    - dotnet build --no-restore Qwe.sln -c Release;
+    - dotnet publish --no-build Qwe.WebAPI/Qwe.WebAPI.csproj -c Release -o ./app -f net10.0
+
+  cache:
+    policy: pull-push
+    key:
+      files:
+        - $PROJECT_DIR/Qwe.WebAPI/Qwe.WebAPI.csproj
+    paths:
+      - $PROJECT_DIR/$CACHE_PATH
+
+  artifacts:
+    paths:
+      - $PROJECT_DIR/app
+    expire_in: 1 hrs
+
+  needs:
+    - job: backend:test
+      artifacts: true
+
+  rules:
+    # Запускать, если запрошена с веб-интерфейса с указанием этого проекта
+    - if: $CI_PIPELINE_SOURCE == "web"
+    # Не запускать для ветки если с неё есть мержреквест, т.к. это будет дубль сборки запущенной для мержреквеста
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    # Запускать при коммите в дефолтную ветку и в мержреквесте
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "merge_request_event"
+      changes:
+        - $PROJECT_DIR/**/*

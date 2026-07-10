@@ -1,0 +1,7 @@
+type: Aggregation
+startClassName: Schedule
+startMultiplicity: 1
+endClassName: ScheduleGroup
+endRole: Groups
+endMultiplicity: '*'
+storage: Schedule

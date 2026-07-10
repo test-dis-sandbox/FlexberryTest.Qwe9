@@ -1,0 +1,69 @@
+diagramType: CAD
+name: Структура университета
+primitives:
+  - type: CADClass
+    caseName: Faculty
+    position: 206, 39
+    size: 268, 104
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: Department
+    position: 212, 241
+    size: 268, 157
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: Group
+    position: 220, 466
+    size: 264, 34
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: tFacultyType
+    position: 586, 54
+    size: 125, 91
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: tDirection
+    position: 588, 175
+    size: 135, 118
+    font: DejaVu Sans 9pt
+  - type: Composition
+    startPrimitive: Faculty
+    endPrimitive: Department
+    points:
+      - 310, 130
+      - 310, 242
+    font: DejaVu Sans 9pt
+  - type: Composition
+    startPrimitive: Department
+    endPrimitive: Group
+    points:
+      - 310, 340
+      - 310, 460
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: StudentBrigades
+    position: 28, 47
+    size: 134, 78
+    font: DejaVu Sans 9pt
+  - type: Composition
+    startPrimitive: Faculty
+    endPrimitive: StudentBrigades
+    points:
+      - 210, 90
+      - 160, 90
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: StudentBrigadesE
+    position: 594, 337
+    size: 139, 66
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: FacultyBS
+    position: 768, 70
+    size: 129, 66
+    font: DejaVu Sans 9pt
+  - type: CADClass
+    caseName: EmptyBS
+    position: 766, 184
+    size: 129, 66
+    font: DejaVu Sans 9pt

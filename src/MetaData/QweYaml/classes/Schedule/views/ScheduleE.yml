@@ -1,0 +1,17 @@
+name: ScheduleE
+properties:
+  - name: Year
+    caption: Год
+  - name: Week
+    caption: Неделя
+  - name: Day
+    caption: День
+  - name: DateFrom
+    caption: Дата
+details:
+  - name: Lessons
+    viewName: LessonD
+    caption: Предметы
+  - name: Groups
+    viewName: ScheduleGroupD
+    caption: Группы

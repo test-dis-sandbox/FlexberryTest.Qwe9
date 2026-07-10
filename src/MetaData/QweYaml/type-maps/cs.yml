@@ -1,0 +1,46 @@
+bool:
+  typeName: System.Boolean
+byte:
+  typeName: System.Byte
+char:
+  typeName: System.Char
+DateTime:
+  typeName: System.DateTime
+decimal:
+  typeName: System.Decimal
+double:
+  typeName: System.Double
+float:
+  typeName: System.Single
+guid:
+  typeName: System.Guid
+int:
+  typeName: System.Int32
+long:
+  typeName: System.Int64
+NullableDateTime:
+  typeName: ICSSoft.STORMNET.UserDataTypes.NullableDateTime
+  assemblyDllName: ICSSoft.STORMNET.UserDataTypes.dll
+NullableDecimal:
+  typeName: ICSSoft.STORMNET.UserDataTypes.NullableDecimal
+  assemblyDllName: ICSSoft.STORMNET.UserDataTypes.dll
+NullableInt:
+  typeName: ICSSoft.STORMNET.UserDataTypes.NullableInt
+  assemblyDllName: ICSSoft.STORMNET.UserDataTypes.dll
+object:
+  typeName: System.Object
+sbyte:
+  typeName: System.SByte
+short:
+  typeName: System.Int16
+string:
+  typeName: System.String
+uint:
+  typeName: System.UInt32
+ulong:
+  typeName: System.UInt64
+ushort:
+  typeName: System.UInt16
+WebFile:
+  typeName: ICSSoft.STORMNET.UserDataTypes.WebFile
+  assemblyDllName: ICSSoft.STORMNET.UserDataTypes.dll

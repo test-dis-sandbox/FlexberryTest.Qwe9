@@ -1,0 +1,11 @@
+name: ScheduleL
+properties:
+  - name: DateFrom
+    caption: Дата
+    visible: false
+  - name: Year
+    caption: Год
+  - name: Week
+    caption: Неделя
+  - name: Day
+    caption: День

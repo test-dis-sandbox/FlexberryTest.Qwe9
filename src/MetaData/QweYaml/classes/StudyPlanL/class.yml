@@ -1,0 +1,10 @@
+name: StudyPlanL
+stereotype: «listform»
+caption: Учебный план
+formViews:
+  - viewName: StudyPlanL
+    viewClassName: StudyPlan
+    dataObjectTypes:
+      - className: StudyPlan
+        newContainerName: StudyPlanE
+        editContainerName: StudyPlanE

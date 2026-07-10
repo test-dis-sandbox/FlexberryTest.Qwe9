@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net10.0</TargetFrameworks>
+    <Configurations>Debug;Release</Configurations>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Qwe.IntegrationTests</RootNamespace>
+    <AssemblyName>Qwe.IntegrationTests</AssemblyName>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <XunitStartupFullName>Qwe.IntegrationTests.Startup</XunitStartupFullName>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net10.0' ">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.1"></PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json"><CopyToOutputDirectory>Always</CopyToOutputDirectory></None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NewPlatform.Flexberry.StyleCopRuleset" Version="1.0.0"></PackageReference>
+    <PackageReference Include="NewPlatform.Flexberry.ORM" Version="8.0.0-beta07"></PackageReference>
+    <PackageReference Include="NewPlatform.Flexberry.ORM.PostgresDataService" Version="8.0.0-beta07"></PackageReference>
+    <PackageReference Include="Moq" Version="4.20.69"></PackageReference>
+    <PackageReference Include="xunit" Version="2.5.0"></PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.0"></PackageReference>
+    <PackageReference Include="Xunit.DependencyInjection" Version="8.8.2"></PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1"></PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qwe.Objects\Qwe.Objects.csproj"></ProjectReference>
+    <ProjectReference Include="..\Qwe.WebAPI\Qwe.WebAPI.csproj"></ProjectReference>
+    <ProjectReference Include="..\Qwe.Tests\Qwe.Tests.csproj"></ProjectReference>
+  </ItemGroup>
+</Project>

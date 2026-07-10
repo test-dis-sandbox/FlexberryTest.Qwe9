@@ -1,0 +1,58 @@
+name: app
+services:
+  postgres-db:
+    image: app/postgre-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=flexberryuser
+      - POSTGRES_PASSWORD=jhv
+      - POSTGRES_DB=appdb
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U flexberryuser -d appdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  liquibase:
+    image: liquibase/liquibase:4.25
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+    environment:
+      - LIQUIBASE_COMMAND_URL=jdbc:postgresql://postgres-db:5432/appdb
+      - LIQUIBASE_COMMAND_USERNAME=flexberryuser
+      - LIQUIBASE_COMMAND_PASSWORD=jhv
+      - LIQUIBASE_COMMAND_CHANGELOG_FILE=changelog.xml
+      - LIQUIBASE_COMMAND_HEADLESS=true
+    volumes:
+      - ../backend/sql:/liquibase/changelog
+    command: ["update"]
+
+  backend:
+    image: app/backend
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      liquibase:
+        condition: service_completed_successfully
+    environment:
+      - DefConnStr=Host=postgres-db;Port=5432;Database=appdb;Username=flexberryuser;Password=jhv
+    ports:
+      - "6500:8080"
+    restart: unless-stopped
+
+  frontend:
+    image: app/frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - BACKEND_URL=http://host.docker.internal:6500
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+volumes:
+  db-data:

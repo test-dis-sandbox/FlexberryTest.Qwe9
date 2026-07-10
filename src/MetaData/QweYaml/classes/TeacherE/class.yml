@@ -1,0 +1,6 @@
+name: TeacherE
+stereotype: «editform»
+caption: Преподаватель
+formViews:
+  - viewName: TeacherE
+    viewClassName: Teacher

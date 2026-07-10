@@ -1,0 +1,6 @@
+startClassName: Student
+startRole: Assistant
+startMultiplicity: 0..1
+endClassName: Group
+endMultiplicity: '*'
+storage: Assistant

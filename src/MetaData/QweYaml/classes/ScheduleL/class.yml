@@ -1,0 +1,10 @@
+name: ScheduleL
+stereotype: «listform»
+caption: Расписания
+formViews:
+  - viewName: ScheduleL
+    viewClassName: Schedule
+    dataObjectTypes:
+      - className: Schedule
+        newContainerName: ScheduleE
+        editContainerName: ScheduleE

@@ -1,0 +1,34 @@
+name: GroupE
+properties:
+  - name: Name
+    caption: Название
+  - name: EnrollmentYear
+    caption: Год поступления
+  - name: Form
+    caption: Форма обучения
+  - name: IsMaster
+    caption: Магистратура
+  - name: FullName
+    caption: Полное название группы
+  - name: Department
+    caption: Кафедра
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: Name
+  - name: Department.Name
+    caption: Название кафедры
+    visible: false
+  - name: Leader
+    caption: Староста
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: FullName
+  - name: Leader.FullName
+    caption: ФИО старосты
+  - name: Assistant
+    caption: Помощник старосты
+    isMaster: true
+    lookupType: standard
+    masterPropertyName: FullName
+  - name: Assistant.FullName
+    caption: ФИО помощника старосты

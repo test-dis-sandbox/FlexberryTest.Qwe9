@@ -1,0 +1,6 @@
+type: Aggregation
+startClassName: Faculty
+startMultiplicity: 1
+endClassName: StudentBrigades
+endMultiplicity: '*'
+storage: Faculty

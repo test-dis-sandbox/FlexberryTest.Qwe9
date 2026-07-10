@@ -1,0 +1,19 @@
+name: tStudentStatus
+stereotype: «enumeration»
+attributes:
+  - name: Active
+    order: 1
+    isNullable: true
+    caption: Обучается
+  - name: Expelled
+    order: 2
+    isNullable: true
+    caption: Отчислен
+  - name: Graduated
+    order: 3
+    isNullable: true
+    caption: Выпущен
+  - name: AcademicLeave
+    order: 4
+    isNullable: true
+    caption: Академический отпуск

@@ -1,0 +1,5 @@
+startClassName: Group
+startMultiplicity: 0..1
+endClassName: Student
+endMultiplicity: '*'
+storage: Group

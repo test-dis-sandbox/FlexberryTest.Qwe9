@@ -1,0 +1,17 @@
+name: FacultyE
+properties:
+  - name: Name
+    caption: Название
+  - name: FoundationDate
+    caption: Дата основания
+  - name: HasMilitaryDepartment
+    caption: Наличие военной кафедры
+  - name: Type
+    caption: Профиль факультета
+details:
+  - name: Department
+    viewName: DepartmentD
+    caption: Кафедра
+  - name: StudentBrigades
+    viewName: StudentBrigadesD
+    caption: СтудОтряды

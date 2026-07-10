@@ -1,0 +1,20 @@
+name: Schedule
+attributes:
+  - name: Year
+    type: int
+    order: 1
+  - name: Week
+    type: int
+    order: 2
+  - name: DateFrom
+    type: DateTime
+    notStored: true
+    stored: false
+    order: 3
+    isNullable: true
+    dataServiceExpression:
+      - dataServiceName: ICSSoft.STORMNET.Business.PostgresDataService
+        data: MAKE_DATE(@Year@, @Week@, @Day@)
+  - name: Day
+    type: int
+    order: 4
