@@ -9,85 +9,84 @@
   "BeforeGenScriptPath": null,
   "AfterGenScriptPath": "AfterGen.sh",
   "GenerationItems": {
-  "Validate": false,
-  "Frontend": {
-    "EmberJs": {
-      "EmberApp": false,
-      "EmberAddon": false,
-      "Build": false,
-      "GitClone": false,
-      "GitPush": false,
-      "GhPagesPush": false
+    "Validate": false,
+    "AppScaffolding": {
+      "InitFromTemplate": true,
+      "TemplateDirectoryPath": ".\\tmp"
     },
-    "ApacheCordova": {
-      "CordovaProject": false,
-      "BuildApp": false
+    "Frontend": {
+      "EmberJs": {
+        "EmberApp": false,
+        "EmberAddon": false,
+        "Build": false,
+        "GitClone": false,
+        "GitPush": false,
+        "GhPagesPush": false,
+        "EmberMetadata": false
+      },
+      "ApacheCordova": {
+        "CordovaProject": false,
+        "BuildApp": false
+      }
+    },
+    "Backend": {
+      "AspNet": false,
+      "AspNetCore": false,
+      "Java": false
+    },
+    "Docker": {
+      "Dockerfile": false,
+      "DockerfileAutobuild": false,
+      "DockerBuildShellScript": false,
+      "DockerSwarm": false
+    },
+    "CiCd": {
+      "AzureDevOps": false,
+      "GitHubActions": false,
+      "GitLab": false
+    },
+    "Storage": {
+      "Mssql": {
+        "DiffSql": false,
+        "FullSql": false,
+        "LiquibaseSql": false,
+        "Security": false,
+        "AdminUser": false,
+        "ConnectionString": null
+      },
+      "PostgreSql": {
+        "DiffSql": false,
+        "FullSql": true,
+        "LiquibaseSql": false,
+        "Security": false,
+        "AdminUser": false,
+        "ConnectionString": null
+      },
+      "ClickHouse": {
+        "DiffSql": false,
+        "FullSql": false,
+        "ConnectionString": null
+      },
+      "Oracle": {
+        "DiffSql": false,
+        "FullSql": false,
+        "ConnectionString": null
+      },
+      "Access": {
+        "DiffSql": false,
+        "FullSql": false,
+        "ConnectionString": null
+      }
+    },
+    "Docs": {
+      "Csv": false,
+      "Wmf": false
+    },
+    "Metadata": {
+      "Crp": false,
+      "Json": false,
+      "Jdl": false,
+      "PlantUML": false
     }
-  },
-  "Backend": {
-    "AspNet": false,
-    "AspNetCore": false,
-    "Java": false
-  },
-  "Docker": {
-    "Dockerfile": false,
-    "DockerfileAutobuild": false,
-    "DockerBuildShellScript": false,
-    "DockerSwarm": false
-  },
-  "Storage": {
-    "Mssql": {
-      "DiffSql": false,
-      "FullSql": false,
-      "Security": false,
-      "AdminUser": false,
-      "ConnectionString": null
-    },
-    "PostgreSql": {
-      "DiffSql": false,
-      "FullSql": true,
-      "Security": false,
-      "AdminUser": false,
-      "ConnectionString": null
-    },
-    "ClickHouse": {
-      "DiffSql": false,
-      "FullSql": false,
-      "ConnectionString": null
-    },
-    "Oracle": {
-      "DiffSql": false,
-      "FullSql": false,
-      "ConnectionString": null
-    },
-    "Access": {
-      "DiffSql": false,
-      "FullSql": false,
-      "ConnectionString": null
-    }
-  },
-  "CiCd": {
-    "AzureDevOps": false,
-    "GitHubActions": false,
-    "GitLab": false
-  },
-  "Docs": {
-    "Readme": false,
-    "Csv": false,
-    "Wmf": false
-  },
-  "Metadata": {
-    "Crp": false,
-    "Fdy": false,
-    "Json": false,
-    "Yaml": false,
-    "JDL": false,
-    "Nuget": false,
-  },
-  "AppScaffolding": {
-    "InitFromTemplate": true,
-    "TemplateDirectoryPath": ".\\tmp",
-    "ScribanLoopLimit": 0
   }
-}
 }
