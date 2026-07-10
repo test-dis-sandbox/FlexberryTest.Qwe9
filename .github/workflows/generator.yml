@@ -1,0 +1,84 @@
+name: CodeGen
+
+# Controls when the action will run.
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# GITHUB_TOKEN должен иметь право на push результата генерации в репозиторий.
+permissions:
+  contents: write
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "Generate"
+  Generate:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-22.04
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Install Flexberry CommandLine
+        run: nuget install NewPlatform.Flexberry.Designer.CommandLine -Version 4.0.0-beta24 -OutputDirectory gen
+
+      - name: Update metadata (yaml)
+        env:
+          FLEXBERRY_TOKEN: ${{ secrets.FLEXBERRY_TOKEN }}
+        run: |
+          export FLEXBERRY_TOKEN
+          dotnet ./gen/*/tools/flexberry.dll ./UpdateConfig.fdg "${FLEXBERRY_TOKEN}"
+
+      - name: Create tmp directory for templates
+        run: mkdir -p tmp
+
+      - name: Code generation (Next.js front + backend by templates)
+        env:
+          FLEXBERRY_TOKEN: ${{ secrets.FLEXBERRY_TOKEN }}
+        run: |
+          export FLEXBERRY_TOKEN
+          chmod +x AfterGen.sh
+          dotnet ./gen/*/tools/flexberry.dll ./GenConfig.fdg "${FLEXBERRY_TOKEN}"
+
+      - name: Git commit
+        run: |
+          set -x
+          git config user.name "Flexberry-man"
+          git config user.email "mail@flexberry.net"
+          git add --all
+          git commit -m "Flexberry code generation"
+          # TODO: возможно, стоит использовать git diff, чтобы проверять изменения: https://stackoverflow.com/questions/855767/can-i-use-git-diff-on-untracked-files
+          # STATUS=$(git diff)
+          # if [ "$STATUS" != "" ]
+          # then
+          #   git add --all
+          #   git commit -m "Flexberry code generation"
+          # fi
+
+      - name: Git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -x
+          # HTTPS push through the built-in GITHUB_TOKEN (SSH deploy keys disabled by GitHub since 01.12.2025).
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin
+          echo "Done."
+
+      - name: Cleanup
+        if: always()
+        run: |
+          rm -Rf .ssh .github *
